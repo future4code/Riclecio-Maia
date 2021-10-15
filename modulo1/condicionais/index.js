@@ -1,4 +1,5 @@
-  //////Exercícios de interpretação de código\\\\\\\\\\
+        //////Exercícios de interpretação de código\\\\\\\\\\
+
 
 
 ///////////EXERCICIO 1\\\\\\\\\\\
@@ -106,16 +107,17 @@
 
 ///R:
 
-const maiorDe18 = Number(prompt("Digite a sua idade."))
+ const maiorDe18 = Number(prompt("Digite a sua idade."))
 
-if(maiorDe18 > 18) {
-  console.log("Você pode dirigir");
+ if(maiorDe18 > 18) {
+   console.log("Você pode dirigir");
 }else{
-   console.log("você não pode dirigir");
+    console.log("você não pode dirigir");
 }
 
 
-    ////Exercicio 2\\\
+     ////Exercicio 2\\\
+
 //Agora faça um programa que verifica que turno do dia um aluno estuda. Peça para digitar M (matutino) ou V (Vespertino) 
 //ou N (Noturno). Imprima no console a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!". Utilize o bloco if/else
 ////R:
@@ -124,22 +126,16 @@ let turnoDeEstudo = prompt("Digite o turno qual você estuda M - para matutino, 
 
 
 if(turnoDeEstudo==="m"){
-   console.log("Bom Dia!");
-
+    console.log("Bom Dia!");
 }else if(turnoDeEstudo==="v"){
-   console.log("Boa Tarde!");
+    console.log("Boa Tarde!");
 }else if(turnoDeEstudo==="n"){
-   console.log("Boa Noite!");
+    console.log("Boa Noite!");
 }else{
-   console.log("Turno não é valido");
-
+    console.log("Turno não é valido");
 }
 
-
-/////EXERCICIO 3\\\\
-// Repita o exercício anterior, mas utilizando a estrutura de `switch case` agora.
-///R:
-
+ /////EXERCICIO 3\\\\
 
 const turnoDeEstudo = prompt("Digite o turno qual você estuda M - para matutino, V- para vespertino ,N - noturno").toLowerCase()
 
@@ -158,11 +154,11 @@ switch (turnoDeEstudo) {
 
        default:
        console.log("Turno não é valido");
-
 }
 
 
-         //////EXERCICIO 4\\\\\\
+          //////EXERCICIO 4\\\\\\
+
 // Considere a situação: você vai ao cinema com um amigo ou amiga, porém ele/ela só 
 //assistirá a um filme com você se ele for do gênero fantasia **e** se o ingresso está abaixo de 15 reais. 
 //Faça um código que pergunta ao usuário qual o gênero de filme que vão assistir e outra pergunta sobre o preço do ingresso, então verifique se seu amigo ou amiga vai topar assistir o filme. Caso positivo, 
@@ -180,39 +176,34 @@ if (generoFilme==="fantasia" && preço<=15){
    console.log("Escolha outro filme");
 }
               
-                       //Desafios
 
 //Modifique o código do exercício 4 de escrita de código para, antes de imprimir a mensagem "Bom filme!", 
 //pergunte ao usuário, pelo prompt qual lanchinho ele vai comprar (pipoca, chocolate, doces, etc) e 
 //imprima no console as mensagens "Bom filme!" e "Aproveite o seu [LANCHINHO]", trocando [LANCHINHO] 
 //pelo que o usuário colocou no input.
-       
 
 const generoFilme = prompt("Digite o genero do filme é").toLowerCase()
-const preço= Number( prompt("Digite o valor do ingresso"))
+ const preço= Number( prompt("Digite o valor do ingresso"))
 const qualLanche=prompt("Digite qual lanche gostaria de comer")
 
 
-if (generoFilme==="fantasia" && preço<=15){
-     console.log(`Bom Filme! e aproveite o seu(sua) ${qualLanche}`);
-}else{
-    console.log("Escolha outro filme");
-}
+ if (generoFilme==="fantasia" && preço<=15){
+      console.log(`Bom Filme! e aproveite o seu(sua) ${qualLanche}`);
+ }else{
+     console.log("Escolha outro filme");
+ }
 
-
-
-
-
-
-
-
+ 
+       
 
 
 //Nome completo;
 //Tipo de jogo: IN indica internacional; e DO indica doméstico;
 //Etapa do jogo: SF indica semi-final; DT indica decisão de terceiro lugar; e FI indica final
-//Categoria: pode ser as opções 1, 2, 3 ou 4;
-//Quantidade de ingressos
+
+ //Categoria: pode ser as opções 1, 2, 3 ou 4;
+ //Quantidade de ingressos
+
 
 //O seu sistema deve solicitar estas informações ao usuário, através do `prompt` . 
 //Além disso, ele deve imprimir tudo isso, junto com o valor de cada ingresso e o valor total que o 
@@ -220,7 +211,8 @@ if (generoFilme==="fantasia" && preço<=15){
 //Abaixo, há a tabela com os valores de cada ingresso e exemplos de execução do programa. 
 //Lembrando que o valor de jogos internacionais é o mesmo de jogos domésticos, mas seus preços devem ser 
 //multiplicados pelo valor do dólar (considerar o dólar = R$4,10)
-              
+               
+
 // const nome=prompt("Digite seu nome completo")
 // const tipoDeJogo=prompt("Digite sigla do tipo do jogo use a sliga- IN indica internacional, ou sigla- DO indica doméstico;").toUpperCase()
 // const etapaDoJogo=prompt("Digite a sigla da etapa do jogo  SF- indica semi-final, DT- indica decisão de terceiro lugar ou FI- indica final").toUpperCase()
@@ -229,6 +221,7 @@ if (generoFilme==="fantasia" && preço<=15){
 // const valorDoIngresso=Number()
 // const quantidadeDeIngressos
 // const imprimeticket(){}
+
 
 
 //  if (tipoDeJogo==="DO"){
