@@ -1,0 +1,106 @@
+body{
+    background-color: rgb(17, 182, 119);
+}
+
+
+.margem-1{
+    background-color: rgb(248, 151, 33);
+    
+    border: 3px solid;
+    margin: 1px;
+    padding: 5px;
+    color: darkgreen;
+}
+a:hover.margem-pagina-1 {
+    color:gray;
+    }
+a:hover.margem-pagina-2 {
+    color:gray;
+        }
+a:hover.margem-pagina-3 {
+    color:gray;
+            }
+a:hover.margem-pagina-4 {
+    color:gray;
+                }
+#margem-2{
+    background-color: rgb(219, 35, 35);
+    margin: 0px;
+    padding: 4px;
+    color: rgb(25, 4, 139);
+}
+.margem-pagina-1{
+    background-color: rgb(156, 245, 133);
+    border: 2px solid;
+    margin: 80px;
+    padding: 3px;
+    color: rgb(2, 65, 2);
+}
+.margem-pagina-2{
+    background-color: rgb(226, 245, 117);
+    border: 3px solid;
+    margin: 80px;
+    padding: 3px;
+    color: rgb(2, 65, 2);
+}
+.margem-pagina-3{
+    background-color: rgb(245, 110, 110);
+    border: 3px solid;
+    margin: 80px;
+    padding: 3px;
+    color: rgb(2, 65, 2);
+}
+.margem-pagina-4{
+    background-color: rgb(98, 97, 196);
+    border: 3px solid;
+    margin: 80px;
+    padding: 3px;
+    color: rgb(2, 65, 2);
+}
+#corRedeSocial{
+    color: rgb(182, 66, 13);
+}
+#cabecalhoCTRL{
+    background-color: rgb(235, 144, 41);
+    border: 3px solid;
+    margin: 0px;
+    padding: 4px;
+    color: rgb(25, 4, 139);
+}
+h2{
+    background-color: rgb(57, 235, 41);
+    border: 3px solid;
+    margin: 30px;
+    padding: 8px;
+    color: rgb(25, 4, 139);
+}
+.centralizar{
+    text-align: center;
+}
+#foto{
+    border: 3px solid;
+    margin: 3px;
+    padding: 3px;
+    background-color: honeydew;
+}
+#descricaoP{
+    border: 3px solid;
+    margin: 3px;
+    padding: 3px;
+    background-color: honeydew;
+}
+#preco{
+    border: 3px solid;
+    margin: 3px;
+    padding: 3px;
+    background-color: honeydew;
+    width: 10vw;
+    height: 2vh;
+}
+#quantidade{
+    border: 3px solid;
+    margin: 3px;
+    padding: 3px;
+    background-color: honeydew;
+    
+}
