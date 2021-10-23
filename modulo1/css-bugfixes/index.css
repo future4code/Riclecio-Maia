@@ -1,0 +1,195 @@
+/** 
+  *
+  *  ESTILOS GERAIS 
+  *
+  **/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: #fe7e02;
+    padding: 10px 5px 10px 5px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+}
+
+button:focus {
+    color: white;
+}
+
+img {
+    width: 100px;
+}
+
+div>p:first-child {
+    display: inline;
+}
+
+div img {
+    background: black;
+}
+
+.botao-amarelo {
+    background-color: #ffaf43;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+       
+}
+
+.botao-amarelo:hover {
+    background-color: #c44f00;
+}
+
+.container {
+    height: 500px;
+    text-align: center;
+    font-family:'roboto', sans-serif;
+}
+
+.icone {
+    height: 15px;
+}
+
+#paragrafo1-home{
+   position: relative;
+    top: 15px;
+    margin: 10;
+    padding: 0;
+}
+#paragrafo2-home{
+    position: relative;
+    top: 15px;
+    margin: 10;
+    padding: 0;
+}
+#paragrafo3-home{
+    position: relative;
+    top: 15px;
+    margin: 10;
+    padding: 0;
+}
+/** 
+  *
+  *  ESTILOS HOME 
+  *
+  **/
+
+#container-de-descricao {
+    background-color: #2274a5;
+    color: white;
+}
+
+#container-de-descricao>ol {
+    padding: 15px 0px;
+}
+
+#container-para-comprar {
+    background-color: #e7eb90;
+}
+
+#container-para-comprar>p {
+    color: #c44f00;
+    padding: 100px 0;
+    font-size: 60px;
+
+}
+
+
+/**
+  *
+  *  ESTILOS COMPRAR 
+  *
+  **/
+
+div:nth-child(2),
+div:last-child {
+    text-align: center;
+}
+
+
+
+table {
+     width: 110%; 
+    text-align: center;
+    font-family:'roboto', sans-serif;
+   
+   
+}
+
+td button {
+    background-color: #fadf63;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    color: black;
+}
+#button1:hover{
+    background-color: rgb(179, 152, 2);
+
+
+}
+button:active{
+    color: honeydew;
+}
+#button2:hover{
+    background-color: rgb(179, 152, 2) ;
+}
+#button3:hover{
+    background-color: rgb(179, 152, 2) ;
+}
+
+.container-do-search {
+    margin-top: 20px;
+    height: 100px;
+  
+}
+.campo-texto{
+   
+    border-top-width:0;
+    border-right-width:0;
+    border-left-width: 0;
+    border-bottom-width:4px;
+}
+
+
+#back-button {
+    background-color: white;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 10px;
+    color: black;
+   
+}
+
+
+#back-button:hover {
+    background-color: #635a3d
+}
+
+.foto1{
+    max-width: 50px;
+}
+.foto2{
+    max-width: 50px;
+}
+.foto3{
+    max-width: 50px;
+}
+.icone{
+    background-color:aliceblue;
+    width: 15px;
+    height: 15px;
+}
