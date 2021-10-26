@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+display: grid;
+height: 10vh;
+grid-template-rows: 40px;
+
+}
+#menu{
+    background-color: #f2d0e0;
+    display: flex;
+    
+   
+    height: 582px;
+    align-items: center;
+    padding: 1 10px;
+}
+
+header{
+    border: 1px solid;
+    display: grid;
+    background-color: mediumvioletred;
+    grid-template-columns: 1fr 60px;
+    align-items: center;
+    padding: 0 10px;
+
+}
+main{
+    display: flex; 
+
+}
+#menu1{
+   display: flex;
+    
+    height: 98%;
+    width: 25vh;
+    padding-left: 10px;
+    padding-top: 10px;
+    justify-content: space-between;
+    
+}
+#menu2{
+    display: grid;
+    background-color: white;
+    height: 100%;
+    width: 100vh;
+    grid-template-rows: 1fr 1fr 10fr  ;
+    grid-template-columns: 250px 180px 250px 180px;
+    row-gap: 5px;
+    column-gap: 5px;
+    justify-items: center;
+    align-items: center;
+    flex-grow: 1;
+   
+}
+#boloDelicioso{
+    border: 1px solid black;
+  
+    
+}
+#seta1{
+    padding-left: 80px;
+}
+#seta{
+   padding-left: 63px;
+}
+#seta2{
+    padding-left: 83px;
+
+}
+
+footer{
+    background-color: mediumvioletred;
+    height: 35px;
+    text-align: center;
+    
+}
+#item1{
+    width: 200px;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px outset;
+    font-size: 12px;
+    
+    
+
+}
+#iteim td{
+text-size-adjust: 5p
+}
