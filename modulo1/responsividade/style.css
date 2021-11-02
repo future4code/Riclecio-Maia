@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header, footer{
+    grid-column: 1/-1;
+}
+header{
+    background-color: rgb(230, 158, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 2 20px;
+}
+
+
+.item1{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    box-shadow: 2px 2px 5px green;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 155, 28);
+    height: 60px;
+}
+
+main{
+    height: 500px;
+     display: grid;
+  grid-template-columns: 8.5cm 8.5cm 8.5cm 8.5cm;
+  padding-top: 1em;
+  padding-bottom: 7em; 
+  padding-left: 20px;
+  
+}
+ .relax{
+  padding-left: 200px;
+ }
+ .circulacao{
+    padding-left: 200px;
+   }
+.otimo{
+    padding-left: 200px;
+}
+.mar{
+    padding-left: 200px;
+}
+.neblina{
+    padding-left: 200px;
+}
+.coelho{
+    padding-left: 200px;
+}
+.vamos{
+    padding-left: 200px;
+}
+.legal{
+    padding-left: 200px;
+}
+.estrada{
+    padding-left: 200px;
+}
+.cachoeira{
+    padding-left: 200px;
+}
+@media screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+main{
+    display: flex;
+    flex-direction: column
+}
+footer{
+    display: flex;
+    flex-direction: column
+}
+}
+    
