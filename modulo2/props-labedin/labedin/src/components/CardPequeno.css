@@ -1,0 +1,19 @@
+.dados-email{
+    display: flex;
+    align-items:flex-start;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 100px;
+    column-gap: normal;
+    text-align: center;
+    
+}
+
+.dados-email > img {
+    width: 70px;
+    margin-right: 10px;
+    border-radius: 10%;
+
+}
+
