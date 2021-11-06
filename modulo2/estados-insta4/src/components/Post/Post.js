@@ -121,6 +121,7 @@ class Post extends React.Component {
           onClickIcone={this.onClickCurtida}
           valorContador={this.state.numeroCurtidas}
         />
+      
 
         <IconeComContador
           icone={iconeComentario}
