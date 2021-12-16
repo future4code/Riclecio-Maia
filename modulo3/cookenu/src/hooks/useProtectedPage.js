@@ -6,7 +6,7 @@ const useProtectedPage = () => {
   const history = useHistory()
   useLayoutEffect(() => {
     const token = localStorage.getItem('token')
-    if (!token){
+  if (!token){
       goToLogin(history)
     }
   }, [history])

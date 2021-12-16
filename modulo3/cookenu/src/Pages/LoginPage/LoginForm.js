@@ -15,8 +15,9 @@ const LoginForm = ({setRightButtonText}) => {
     const onSubmitForm = (event) => {
        
         event.preventDefault()
-        login(form, clear, history, setRightButtonText, setIsLoading)
+         login(form, clear, history, setRightButtonText, setIsLoading)
     }
+    
 
     return (
         <LoginFormContainer>

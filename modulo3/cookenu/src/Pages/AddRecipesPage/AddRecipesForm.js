@@ -33,16 +33,16 @@ const AddRecipeForm = () => {
           <TextField
             name={"description"}
             value={form.description}
-            onChange={onChange}
+           onChange={onChange}
             label={'Descrição'}
-            variant={'outlined'}
+         variant={'outlined'}
             fullWidth
             required
             margin={'normal'}
           />
           <TextField
             name={"image"}
-            value={form.image}
+         value={form.image}
             onChange={onChange}
             label={'Foto'}
             variant={'outlined'}

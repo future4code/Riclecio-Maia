@@ -7,7 +7,7 @@ const useUnprotectedPage = () => {
   useLayoutEffect(() => {
     const token = localStorage.getItem('token')
     if (token){
-      goToRecipesList(history)
+     goToRecipesList(history)
     }
   }, [history])
 }

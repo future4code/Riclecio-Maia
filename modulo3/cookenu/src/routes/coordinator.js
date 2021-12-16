@@ -2,9 +2,9 @@ export const goToLogin=(history)=>{
     history.push("/login")
 
 }
-export const goToSignUp=(history)=>{
-    history.push("/cadastro")
 
+export const goToSignUpPage = (history) => {
+    history.push("/cadastro")
 }
 export const goToAddRecipes=(history)=>{
     history.push("/adicionar-receita")

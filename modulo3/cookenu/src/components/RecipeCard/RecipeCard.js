@@ -18,7 +18,7 @@ const RecipeCard = (props) => {
         />
         <RecipeCardContent>
           <Typography align={'center'}>
-            {props.title.toUpperCase()}
+            {/* {props.title.toUpperCase()} */}
           </Typography>
         </RecipeCardContent>
       </CardActionArea>

@@ -1,34 +1,32 @@
 import React from "react"
-import {ScreenContainer,LogoImage,InputsContainer, SignUpButtonContainer} from "./styled"
+import { ScreenContainer, LogoImage, SignUpButtonContainer } from "./styled"
 import logo from "../../assets/logo.png"
-import { Button } from "@material-ui/core"
+import Button from '@material-ui/core/Button'
 import LoginForm from "./LoginForm"
-import { goToSignUp } from "../../routes/coordinator"
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import { useHistory } from 'react-router-dom'
+import {goToSignUpPage} from "../../routes/coordinator"
+import useUnprotectedPage from '../../hooks/useUnprotectedPage';
 
-const Login= ()=>{
-
- const history=useHistory()
-
-    return(
+const LoginPage = ({setRightButtonText}) => {
+    useUnprotectedPage()
+    const history = useHistory()
+    return (
         <ScreenContainer>
-            <LogoImage src={logo}/>
-            <LoginForm/>
-            
+            <LogoImage src={logo} />
+            <LoginForm setRightButtonText={setRightButtonText}/>
             <SignUpButtonContainer>
-               
-            <Button 
-            onClick={()=>goToSignUp(history)}
-            type={"submit"}
-            fullWidth
-            variant={"text"}
-            color={"primary"}> 
-            Não possui conta? Cadastre-se 
-            </Button>
+                <Button
+                    onClick={() => goToSignUpPage(history)}
+                    type={"submit"}
+                    fullWidth
+                    variant={"text"}
+                    color={"primary"}
+                >
+                    Não possui conta? Cadastre-se
+                    </Button>
             </SignUpButtonContainer>
-
-            </ScreenContainer>
+        </ScreenContainer>
     )
-
 }
-export default Login
+
+export default LoginPage
