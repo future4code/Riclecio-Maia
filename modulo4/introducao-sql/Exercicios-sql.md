@@ -1,4 +1,4 @@
-``` CREATE TABLE `Actor`( 
+`` CREATE TABLE `Actor`( 
 ID VARCHAR(255) PRIMARY KEY,
 nome VARCHAR (255) NOT NULL,
 salary FLOAT NOT NULL,
@@ -206,7 +206,7 @@ SELECT * FROM Films WHERE nome LIKE "%mae%" OR sinopse LIKE "%nordestinos%";
 SELECT * FROM Films WHERE data_lançamento < "2022-01-20";
 #d) Procure por algum filme que já tenha lançado, 
 #com o termo de busca contido no título ou sinopse e com a avaliação maior do que 7. 
-SELECT * FROM Films WHERE data_lançamento < "2020-05-04" AND (nome LIKE "%Deus%" OR sinopse LIKE "%sedutora%") AND avaliacao > 7;```
+SELECT * FROM Films WHERE data_lançamento < "2020-05-04" AND (nome LIKE "%Deus%" OR sinopse LIKE "%sedutora%") AND avaliacao > 7;``
 
 
 
