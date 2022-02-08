@@ -19,9 +19,9 @@ app.use(cors());
 //exercicio 1
 
 // *a.* Qual endpoint você deve utilizar para isso?
-    //Get
+    //R:Get
 // b. Como indicamos o tipo de uma função assíncrona que retorna um "array de qualquer coisa"?
-// async ():Promise<type[]>
+//R: async ():Promise<type[]>
 
 
 async function getSubscribers(): Promise<any[]> {
@@ -41,7 +41,7 @@ getSubscribers().then(console.log)
 //exercicio 2
 // *a.* Explique, com suas palavras, a diferença da sintaxe de uma função nomeada assíncrona e 
 //uma arrow function assíncrona
-// arrow function e mais objetiva e simples menos verbosa,const "getSubscriber = async (): Promise<any[]> =>"
+//R: arrow function e mais objetiva e simples menos verbosa,const "getSubscriber = async (): Promise<any[]> =>"
 // função assincrona nomeada a função nomeada deixa  claro o que é  nas primeiras palavras "async function getSubscribers(): Promise<any[]>"
 
 // b. Implemente a função solicitada, usando arrow function
@@ -77,7 +77,7 @@ type user={
     //caso seja indicado que ela retorne um `Promise<any>`. 
     //Explique com as suas palavras o porquê de fazermos isso
     
-    //boa pratica para indicar o que tem dentro dessa promise, retorno
+    //R:boa pratica para indicar o que tem dentro dessa promise, retorno
 
     // c. Reimplemente a função, corretamente.    
 
@@ -105,6 +105,7 @@ getAllSubscribers().then(console.log)
 // Crie uma função que permita criar uma nova notícia.
     
 //     *a.* Qual é o tipo dessa função? Por quê?
+//R:função nomeada assincrona, pois ela cria noticia sem assim de modo assicrono no codigo
     
 //     b. Implemente a função solicitada
 async function createNews(
@@ -152,9 +153,12 @@ async function createNews(
 //responda as perguntas abaixo:
   
 //   a. O que o `Promise.all` faz?
+// R: Promise que resolve  todas as promises,método que recebe um array de Promises
+
   
 //   b. Quais as vantagens de se utilizar o `Promise.all` no caso de se enviar as 
 //notificações para todos os usuários?
+//R: ela ira enviar para todos usuarios de uma vez 
   
 //   c. Reimplemente a função utilizando `Promise.all`
 
