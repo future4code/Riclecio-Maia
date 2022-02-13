@@ -2,7 +2,7 @@ import express,{Request, Response} from "express";
 import cors from 'cors'
 import dotenv from 'dotenv'
 import { connection } from "./data/connection"
-import { Tipo } from "./types/tipo";
+import {  Product, Purchases, User } from "./types/tipo";
 
 
 dotenv.config()
@@ -10,7 +10,7 @@ dotenv.config()
  const createUser = async (req: Request, res: Response):Promise<void> => {
     try {
         
-        const {name, email, password} = req.body
+        const  {name, email, password}:User = req.body
 
         await connection("labecommerce_users")
         .insert({
@@ -41,7 +41,7 @@ dotenv.config()
 const addProduct = async (req: Request, res: Response):Promise<void> => {
     try {
         
-        const {name, price,image_url } = req.body
+        const {name, price,image_url }:Product = req.body
 
         await connection("labecommerce_products")
         .insert({
@@ -50,6 +50,15 @@ const addProduct = async (req: Request, res: Response):Promise<void> => {
             price,
             image_url
         })
+        if(!name){
+            throw new Error(" Preencha todos os campos.")
+        }
+        if(!price){
+            throw new Error(" Preencha todos os campos.")
+        }
+        if(!image_url){
+            throw new Error(" Preencha todos os campos.")
+        }
 
         res.status(201).send({message: "Produto cadastrado  com sucesso!"})
     } catch (error:any) {
@@ -70,19 +79,31 @@ const getProducts = async (req: Request, res: Response):Promise<void> => {
     }
 };
 
-const registerPurchase = async (req: Request, res: Response):Promise<void> => {
+ const registerPurchase = async (req: Request, res: Response):Promise<void> => {
     try {
         
-        const {user_id, product_id , quantity } = req.body
+        const {user_id, product_id , quantity }:Purchases = req.body
+    
 
         await connection("labecommerce_purchases")
         .insert({
             id: Date.now().toString(),
             user_id, 
             product_id , 
-            quantity
+            quantity,
+           
         })
+        if( user_id == null){
+            throw new Error(" Preencha todos os campos.")
+        }
+        // if(!product_id || null){
+        //     throw new Error(" Preencha todos os campos.")
+        // }
+        // if(!quantity || null){
+        //     throw new Error(" Preencha todos os campos.")
+        // }
 
+      
         res.status(201).send({message: "Compra realizada com sucesso!"})
     } catch (error:any) {
         res.send({error, message:error.message})
@@ -102,12 +123,7 @@ const getPurchases = async (req: Request, res: Response):Promise<void> => {
 };
 
 
-
-
-
-
-
-
+ 
 
 
 
@@ -225,5 +241,5 @@ app.post("/products", addProduct),
 app.get("/products",getProducts ),
 app.post("/purchases", registerPurchase),
 
-app.get("/purchase",getPurchases)
+app.get("/user/:id/purchase",getPurchases)
  
