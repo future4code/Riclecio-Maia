@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import { User } from "./user";
 import { Customer } from "./customer";
 import {  client, Client } from "./client";
+import { Place,Residence,Commerce,Industry } from "./place";
 
 
 // - Exercício 1
@@ -75,14 +76,116 @@ console.log(customerOne.introduceYourself());
 console.log(client,client.calculateBill());
 
 
+//Exercício 2
+// Essa classe é abstrata porque está representando um tipo de informação que 
+//simplesmente **abstrai** e **armazena** as características em comum de um 
+//conjunto de outras classes. Por ser abstrata, não podemos criar uma instância dela. 
+//Essa é uma regra da Programação Orientada a Objetos e válida para todas as linguagens.
+
+// a) *Mesmo sabendo que não é possível, tente criar uma instância dessa classe 
+//(ou seja: `new Place(...)`). Qual foi o erro que o Typescript gerou?*
+//R: não e possivel criar instancia para classe abstrata
+//const place:Place = new Place("0010564" );
+
+
+// b) *Pense e responda: o que precisaríamos fazer para conseguir efetivamente 
+//criar uma instância dessa classe?*
+// tornar ela uma classe "normal" ao tirar abstract conseguimos imprimir
+//console.log(place.getCep());
 
 
 
+// - Exercício 3
+    
+//     Esse exercício vai responder melhor a essas três perguntas: 
+    
+//     1) *O que precisaríamos fazer para conseguir efetivamente criar uma 
+//instância da classe Place? (última pergunta do exercício anterior)*
+//tornar ela uma classe "normal" ao tirar abstract conseguimos imprimir
+    
+//     2) *Por que a `Place` não é uma interface?
+//        por ter  por conster medidas de segurança que interface não possui
+    
+//     3) *Por que a classe `Place` é uma Classe Abstrata?*
+ //           para medida de segurança de cep
+    
+//     Será um pouco mais longo, mas esperamos que seja esclarecedor.
+    
+//     Vamos começar lendo três classes. 
+    
+//     A primeira representa uma casa residencial. Vamos armazenar nela uma variável 
+//para representar a quantidade de moradores (`residentsQuantity`)
+
+const residence = new Residence(6,"00643599")
+const commerce = new Commerce(2, "00551.9751")
+const industry = new Industry(7, "0065546745")
+console.log(residence.getCep())
+console.log(commerce.getCep())
+console.log(industry.getCep())
 
 
 
+// - Exercício 4
+    
+//     Agora, você vai começar a colocar a mão na massa!
+// Crie uma classe para representar um Cliente Residencial (`ResidentialClient`). 
+//Ela deve possuir uma propriedade de CPF, que será privada, uma vez que o 
+//CPF não pode mudar e não teremos uma classe filha da `ResidentialClient` 
+//(assim, `protected` não faz sentido). Crie o getter também.
+    
+//     Essa classe deve ser **filha** da classe `Residence` e implementar a classe 
+//Client`. Lembre-se que a classe deve implementar todos métodos e atribuir valores a 
+//todas as propriedades que herda da interface. No caso das residências, o valor da conta
+// é **(quantidade de energia) x 0.75.**- Exercício 4
+    
+//     Agora, você vai começar a colocar a mão na massa!
+    
+//     Crie uma classe para representar um Cliente Residencial (`ResidentialClient`). 
+//Ela deve possuir uma propriedade de CPF, que será privada, uma vez que o CPF não pode 
+//mudar e não teremos uma classe filha da `ResidentialClient` 
+//(assim, `protected` não faz sentido). Crie o getter também.
+    
+//     Essa classe deve ser **filha** da classe `Residence` e implementar a classe
+// `Client`. Lembre-se que a classe deve implementar todos métodos e atribuir valores a 
+//todas as propriedades que herda da interface. No caso das residências, o valor da conta 
+//é **(quantidade de energia) x 0.75.**
+
+//) Que métodos e propriedades essa classe possui? Por quê?
+//R:getCpf- pegar cpf calculateBill-- calcula consumo de energia
 
 
+
+// - Exercício 5
+    
+//     Crie a classe `CommercialClient` para representar o 
+//Cliente Comercial. Ele deve possuir um CNPJ (privado). Crie os getter dela.
+    
+//     Essa classe deve ser **filha** da classe `Commerce` e implementar a 
+//interface `Client`. Nesse caso, o valor da conta é **(quantidade de energia) x 0.53.**
+    
+//     a) *Quais as semelhanças dessa classe com a `ResidentialClient`?*
+//R:mesmas propriedades de Client  e o método calculateBill
+    
+//     b) *Quais as diferenças dessa classe com a `ResidentialClient`?*
+//R:Propriedades Residence e commerce, onde altera-se o cpf por cnpj, 
+//residentsQuantity por floorQuantity e o método getCpf por getCnpj.
+
+//exercicio 
+// Agora, crie a classe `IndustrialClient` para representar o Cliente Industrial. 
+//Ele deve possuir um um número de registro industrial (privada). Crie somente os 
+//getters dela.
+
+// a) *De* q*ual classe a `IndustrialClient` deve ser filha? Por quê?*
+
+//R: IndustrialClient filha da classe Industry, pois queremos pegar informações de industrial.
+
+// b) *Que interface a `IndustrialClient` implementa? Por quê?*
+
+ // R:Ela implementa a interface Client pois industry é place no qual o responsável é um client
+
+// c) *Nós pedimos para criar somente os getters dessa classe. Pense num motivo para isso: por que só os getters?*
+
+//R: queremos apenas  informações dos estabelecimentos e  clientes.
 
 
 
