@@ -29,6 +29,6 @@ export  async function getProfile(
 async function getUserById(id:string): Promise<any>{
     const [user] = await connection('cookenu_users').where({ id });
 
-    return user;
+    return user
 } 
 
