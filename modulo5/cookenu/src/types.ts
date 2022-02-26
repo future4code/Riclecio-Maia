@@ -15,3 +15,12 @@ export enum USER_ROLES {
     password: string
     role: USER_ROLES
  }
+ export interface recipe{
+  
+   id:string
+   title:string
+   description:string
+   image:string
+   creation_date:string
+   creator_id:string
+ }

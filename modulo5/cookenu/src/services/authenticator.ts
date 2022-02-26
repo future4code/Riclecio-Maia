@@ -26,8 +26,8 @@ dotenv.config()
                 process.env.JWT_SECRET as string
             ) as JwtPayload
             return {
-                id:tokenData.id,
-                role:tokenData.role
+                id:tokenData.id as string,
+                role:tokenData.role as string
             }
         } catch (error) {
             console.log(error)

@@ -30,9 +30,9 @@ export async function signup(req: Request, res: Response): Promise<void> {
         await connection('cookenu_users')
             .insert(newUser)
 
-        const token = authenticator.generateToken({ id, role })
-
-        res.status(201).send({ message: "Usuario criado com sucesso!", newUser, token })
+        //const token = authenticator.generateToken({ id, role })
+        
+        res.status(201).send({ message: "Usuario criado com sucesso!", newUser })
 
 
 

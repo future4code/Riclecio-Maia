@@ -8,27 +8,29 @@ export  async function getProfile(
 ): Promise<void> {
    try {
     const token = req.headers.authorization as string;
+    
     if(!token){
         res.statusCode = 401
-        res.statusMessage = "token invalido ou nao passado no headers"
-        throw new Error("token invalido ou nao passado no headers")
+        res.statusMessage = "token invalido ou não digitado no headers"
+        throw new Error("token invalido ou não digitado no headers")
     }
-    const authenticationData = authenticator.getTokenData(token);
 
-    const user = await getUserById(authenticationData.id);
+    const authentication = authenticator.getTokenData(token);
+    const user = await getUserById(authentication.id);
+
     const result = { id: user.id, name: user.name,email: user.email }
-    res.status(200).send({result});
-
-   } catch (error:any) {
-        res.status(400).send({
+    res.status(200).send({result });
+    
+} catch (error:any) {
+    res.status(400).send({
         message: error.message,
-      });
-   }
+    });
+}
 }
 
-async function getUserById(id:string): Promise<any>{
-    const [user] = await connection('cookenu_users').where({ id });
-
+async function getUserById(ID:string): Promise<any>{
+    const [user] = await connection('cookenu_users').where({ ID});
+    
     return user
 } 
 

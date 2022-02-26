@@ -21,4 +21,28 @@ Content-Type: application/json
 ### Pegar informações do seu perfil
 GET http://localhost:3003/user/profile
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZmZTU3NzFlLWI2NzctNGVkNy04OGRhLWRmMGNmMjg5OTFhNiIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NDU3NDg3MDMsImV4cCI6MTY0NTc5MTkwM30.e-SXD6dO_Ns96XHIkZvGN5LyUuiCqQktJ8B_AKRxEmw
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODExNDMwLTM5OTAtNDg4Yi04N2Y5LTAxN2JjOGYzYjJjNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NDU4MjIzNzgsImV4cCI6MTY0NTkwODc3OH0.CFEfZIQhvpmChRsfNOCwkT1PNIuKM1h9JJylLcQMZjE
+
+### pegar informações de outro perfil por Id,'só é permitidos para Admin' 
+GET http://localhost:3003/user/2b5a4ca4-67d6-4552-bda3-892f40350d4a
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5NzI1YThkLTY1YmYtNDc2Mi05NGI5LWM1Y2MzNmQ3NDUzNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NTgyNDU4OCwiZXhwIjoxNjQ1OTEwOTg4fQ.7DrbPGwPCv8M7QfPsoCehwkgQ8e_LVQpqJQjXkbA8UA
+
+
+### Criar receitas 
+POST http://localhost:3003/recipe
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5NzI1YThkLTY1YmYtNDc2Mi05NGI5LWM1Y2MzNmQ3NDUzNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NTgyNDU4OCwiZXhwIjoxNjQ1OTEwOTg4fQ.7DrbPGwPCv8M7QfPsoCehwkgQ8e_LVQpqJQjXkbA8UA
+
+{
+"title":"Amortentia",
+"description":"Morango, 20minutos agua fervida depois amasse o morango até ele ficar em liquido depois espere 10 minutos a agua esfriar coloque erva doce e o perfume ou o suor da vitima espere mais 20 minutos e está pronto",
+"image":"https://cdn.meusartesanato.com.br/i/1/6/17/diy-pocao-do-amor-amortentia-gBMq-o.jpg"
+}
+
+
+### Pegar Receitas por id
+
+GET http://localhost:3003/recipe/5c29d73f-4516-4e83-9839-5736f0faabb3
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5NzI1YThkLTY1YmYtNDc2Mi05NGI5LWM1Y2MzNmQ3NDUzNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NTgyNDU4OCwiZXhwIjoxNjQ1OTEwOTg4fQ.7DrbPGwPCv8M7QfPsoCehwkgQ8e_LVQpqJQjXkbA8UA
