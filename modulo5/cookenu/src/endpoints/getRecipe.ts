@@ -31,6 +31,7 @@ export default async function getRecipe(
       id: recipe.id,
       title: recipe.title,
       description: recipe.description,
+      image:recipe.image,
       creation_date: creation_date,
       creator_name: user.name
     });

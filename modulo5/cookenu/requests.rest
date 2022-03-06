@@ -32,10 +32,10 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5NzI1YThkLTY1YmYt
 ### Criar receitas 
 POST http://localhost:3003/recipe
 Content-Type: application/json
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5NzI1YThkLTY1YmYtNDc2Mi05NGI5LWM1Y2MzNmQ3NDUzNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NTgyNDU4OCwiZXhwIjoxNjQ1OTEwOTg4fQ.7DrbPGwPCv8M7QfPsoCehwkgQ8e_LVQpqJQjXkbA8UA
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJiNWE0Y2E0LTY3ZDYtNDU1Mi1iZGEzLTg5MmY0MDM1MGQ0YSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NDU5Nzc2MjYsImV4cCI6MTY0NjA2NDAyNn0.PRhH_S3O8S3V5BAUK9_fn31CWp8Wrk5oy5yPzH9zBCA
 
 {
-"title":"Amortentia",
+"title":"amortentia",
 "description":"Morango, 20minutos agua fervida depois amasse o morango até ele ficar em liquido depois espere 10 minutos a agua esfriar coloque erva doce e o perfume ou o suor da vitima espere mais 20 minutos e está pronto",
 "image":"https://cdn.meusartesanato.com.br/i/1/6/17/diy-pocao-do-amor-amortentia-gBMq-o.jpg"
 }
@@ -46,3 +46,24 @@ Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5NzI1YThkLTY1YmYtN
 GET http://localhost:3003/recipe/5c29d73f-4516-4e83-9839-5736f0faabb3
 Content-Type: application/json
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5NzI1YThkLTY1YmYtNDc2Mi05NGI5LWM1Y2MzNmQ3NDUzNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY0NTgyNDU4OCwiZXhwIjoxNjQ1OTEwOTg4fQ.7DrbPGwPCv8M7QfPsoCehwkgQ8e_LVQpqJQjXkbA8UA
+
+### seguir usuario
+POST http://localhost:3003/user/follow
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODExNDMwLTM5OTAtNDg4Yi04N2Y5LTAxN2JjOGYzYjJjNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NDU5OTUwMDgsImV4cCI6MTY0NjA4MTQwOH0.MNKdFT6m3OL6SWAQjSBiC9GceYITNIM4VFOBGphr79E
+
+{
+ "userToFollowId":"ad77f403-6d69-4415-b53b-8926c750f49f"
+}
+
+
+### Deixar Seguir
+DELETE http://localhost:3003/user/unfollow 
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODExNDMwLTM5OTAtNDg4Yi04N2Y5LTAxN2JjOGYzYjJjNSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NDU5OTUwMDgsImV4cCI6MTY0NjA4MTQwOH0.MNKdFT6m3OL6SWAQjSBiC9GceYITNIM4VFOBGphr79E
+
+{
+    "userToUnfollowId":"ad77f403-6d69-4415-b53b-8926c750f49f"
+}
+
+
