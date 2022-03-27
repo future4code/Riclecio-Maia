@@ -46,7 +46,6 @@ const HomePage = () => {
         )
     })
 
-    console.log(videos)
 
     return (
         <div>

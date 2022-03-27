@@ -14,7 +14,7 @@ const SearchBar = styled('div')(({ theme }) => ({
       backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
     width: '100%',
-    // border: '1px solid red'
+    
 }));
   
 const SearchIconWrapper = styled('button')(({ theme }) => ({
