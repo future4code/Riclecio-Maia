@@ -1,0 +1,29 @@
+
+.navbar_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2D0C5E;
+    
+    color: #FFFFFF;
+    padding: 1em;
+    width: auto;
+    height: 17em;
+    top: 3.3em;
+}
+.text1{
+    font-size: 2.5em;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+    letter-spacing: -0.005em;
+    width: 50%;
+}
+
+.navbar_title button{
+    width: 5em;
+    height: 1.8em;
+    border-radius: 25%;
+}
