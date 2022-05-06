@@ -3,7 +3,7 @@
 
 ### Link do Surge: 
 
-deranged-story.surge.sh
+deranged-story.surge.sh/
 
 ## Feito Com:
 
